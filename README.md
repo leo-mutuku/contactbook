@@ -1,10 +1,11 @@
 # Contact book
-+ + This is  simple api implimentation for the CRUDE operations using nodejs(Javascript) and reactjs(Javascript)
 
- + Backend libraries
- [x] express - to manage server and routes
- [x] cors - allow cross-origin access
- [x] bcrypt - to hash and store passwords
+## This is  simple api implimentation for the CRUDE operations using nodejs(Javascript) and reactjs(Javascript)
+
+ ### Backend libraries
+ [ x ] express - to manage server and routes
+ [ x ] cors - allow cross-origin access
+ [ - ] bcrypt - to hash and store passwords
  [x] jsonwebtoken - used for authentication
  [x] uuid - Universally Unique IDentifier to generate unique id keys
  [x] keep passwords, API keys, and other sensitive data out of your code (However the .env file has been included in this repo)
@@ -12,7 +13,7 @@
  [x] pg - provide modules for interacting interfacing with PostgreSQL database
 
 
- + Installation
+ ## Installation
  [x] fork, clone and run npm install 
  [x] create contactbook db on your postgres shell - the sql commands are in the file name schemas.sql
  [x] you can also restore the contactbook_dump.sql
