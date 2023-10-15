@@ -33,13 +33,22 @@
 
 
 ## Authentication endpoints
-- [] http://localhost:8000/signup
-- [] http://localhost:8000/login
+- [-] http://localhost:8000/signup
+- [-] http://localhost:8000/login
 
 
 
 ### signup page
+- [x] aut redirect and login  
+- [x] keep user email and auth token in cookies (consider htttp-only cookies or manage session using react statemanagement)
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signup.JPG)
 
+- [x] keep user email and auth token in cookies (consider htttp-only cookies or manage session using react statemanagement)
 ### login page
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/login.JPG)
+
+### homepage after successful login
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/homepage.JPG)
+
+### homepage after successful login
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
