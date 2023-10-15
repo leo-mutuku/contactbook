@@ -11,8 +11,8 @@ CREATE DATABASE contactbook;
 
 CREATE TABLE contacts(
     id VARCHAR(255) PRIMARY KEY,
-    contactEmail VARCHAR(255),
-    contacName VARCHAR(30),
+    contactemail VARCHAR(255),
+    contacname VARCHAR(30),
     contact INT,
     date VARCHAR(300)
 );
