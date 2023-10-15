@@ -60,11 +60,11 @@
 ### add contact page / button click
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
 
-### update contact bool with some entries
-![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/update-contactbook.JPG)
+### update contact book with some entries
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/updated-contactbook.JPG)
 
-### delet an entry from contact book
-![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
+### delete an entry from contact book
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/deleted-garbage-collector-number.JPG)
 
 ### signout, redirect to login clear cookies
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signout.JPG)
