@@ -48,7 +48,7 @@
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/login.JPG)
 
 ### homepage after successful login
-![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/homepage.JPG)
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/homepage-after-login.JPG)
 
 ### homepage after successful login
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
