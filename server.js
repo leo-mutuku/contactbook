@@ -37,21 +37,26 @@ app.use("/signup", async (req, res) => {
 
 app.use("/login", async (req, res) => {
   const { email, password } = req.body;
+  if(!email || !password){
+    return res.json("all fields a required")
+  }
   try {
     // check if email exist
     const users = await pool.query("SELECT * FROM users WHERE email = $1", [
       email,
     ]);
-    if (!users.rows.length) return res.json({ detail: "user does not exist" });
+    if (!users.rows.length){ return res.json({ detail: "user does not exist" })};
+
     const success = await bcrypt.compare(
       password,
       users.rows[0].hashed_password
     );
+    
     const token = jwt.sign({ email }, "secret", { expiresIn: "1hr" });
-    if (success) {
-      res.json({ email: users.rows[0].email, token });
+    if (!success) {
+        res.json({ detail: "Login failed" });
     } else {
-      res.json({ detail: "Login failed" });
+        res.json({ email: users.rows[0].email, token });
     }
   } catch (err) {
     console.error(err);
