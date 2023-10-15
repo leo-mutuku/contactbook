@@ -70,5 +70,5 @@
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signout.JPG)
 
 
-#    ------------------------------------------End ----------------------------------------
+#    ----------------------- end crafted with passion ----------------------------
   
