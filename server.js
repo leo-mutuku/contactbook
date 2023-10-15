@@ -1,12 +1,69 @@
 require('dotenv').config()
 const PORT = process.env.PORT ?? 8001
+const {v4:uuidv4} = require('uuid')
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const pool = require('./db')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
-//first endpoint to get all contacts
-app.get('/contacts',async(req,res) =>{
+app.use(cors())
+app.use(express.json())
 
+
+
+app.use('/signup',async(req,res)=>{
+    
+    const {email, password} = req.body
+    const salt = bcrypt.genSaltSync(10)
+    const hashedPassword = bcrypt.hashSync(password, salt)
+    try {
+       const signup =  await pool.query('INSERT INTO users (email, hashed_password) VALUES($1,$2)',
+        [email,hashedPassword])
+        
+        const token = jwt.sign({email}, 'secret', {expiresIn:'1hr'})
+
+        res.json({email, token})
+        console.log()
+    } catch (err) {
+        console.error(err)
+        // log error in a file
+        res.json({detail:err.detail})
+
+        // frontent to decide what to show on from the detailed error
+        
+    } finally{
+        //close any risk resource , access to a certain database
+    }
+
+})
+
+app.use('/login',async(req,res)=>{
+    const {email , password} = req.body
+    try {
+        // check if email exist
+        const users = await pool.query('SELECT * FROM users WHERE email = $1',
+        [email])  
+        if(!users.rows.length) return res.json({detail:"user does not exist"})
+        const success = await bcrypt.compare(password, users.rows[0].hashed_password)
+        const token = jwt.sign({email}, 'secret', {expiresIn:'1hr'})
+        if(success){
+            res.json({'email':users.rows[0].email, token})
+        }
+        else{
+            res.json({detail:'Login failed'})
+        }
+    } catch (err) {
+       console.error(err)
+    }finally{
+        // close any resource that should not be running upon login error
+        //strictly for financial systems in which 
+    }
+
+})
+app.get('/contacts/:userEmail',async(req,res) =>{
+     console.log(req.body.params)
     try {
         const contacts = await pool.query('SELECT * FROM contacts')
 
@@ -18,10 +75,36 @@ app.get('/contacts',async(req,res) =>{
         res.json(err)
         
     }finally{
-        // await any thing that need to be termiated
+        // await any thing that need to be termiated incase of an error
     }
     
 })
+
+
+// create a new contact , we expect to get some data from frontent. 
+// esentially we will get contactEmail, contaName, contact  and date
+// we will generate id using uuid library, already installed
+app.post('/contacts', async(req,res) =>{
+    
+    try {
+       const {userEmail,contactName ,contact, date} =req.body
+       console.log(userEmail)
+        const id = uuidv4()
+        
+        const newContact =await pool.query('INSERT INTO contacts(id, useremail, contactname, contact, date) VALUES($1, $2,$3,$4,$5)',
+        [id, userEmail, contactName, contact, date]);
+        
+        res.json(newContact)
+    } catch (err) {
+        console.error(err)
+        // Log errors to a file (good practice)
+    }finally{
+        // await any thing that need to be termiated incase of an error
+    }
+})
+
+// edit existing contact
+
 
 
 //
