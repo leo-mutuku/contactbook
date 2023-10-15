@@ -64,7 +64,7 @@
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/updated-contactbook.JPG)
 
 ### delete an entry from contact book
-![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/deleted-garbage-collector-number.JPG)
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/deleted-contact.JPG)
 
 ### signout, redirect to login clear cookies
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signout.JPG)
