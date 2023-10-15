@@ -33,8 +33,15 @@
 
 
 ## Authentication endpoints
-- [-] http://localhost:8000/signup
-- [-] http://localhost:8000/login
+- [x] post http://localhost:8000/signup
+- [x] post http://localhost:8000/login
+
+## Other endpoints
+- [x] get http://localhost:8000/contacts/:userEmail
+- [x] post http://localhost:8000/contacts
+- [x] patch http://localhost:8000/contacts/:id
+- [x] delete http://localhost:8000/contacts/:id
+
 
 
 
