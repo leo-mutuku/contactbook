@@ -21,17 +21,25 @@
  - [x] to start the backend npm run dev
 
 
-+ Frontent 
+## Frontent 
 - [x] the frontend is a branch named frondend
 - [x] to install the frontend use npm install (from within the frontend folder)
 - [x] 
 
-+ Default user accounts
+## Default user accounts
 - [x] email user1@gmail.com password user123
 - [x] email user1@gmail.com password user123
-- [x] 
+- [x] note this can be create from the frontend once database is setup
+
+
+## Authentication endpoints
+- [] http://localhost:8000/signup
+- [] http://localhost:8000/login
 
 
 
-
+### signup page
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signup.JPG)
+
+### login page
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/login.JPG)
