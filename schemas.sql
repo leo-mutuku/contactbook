@@ -9,7 +9,7 @@
 
 CREATE DATABASE contactbook;
 
-CREATE TABLE conacts(
+CREATE TABLE contacts(
     id VARCHAR(255) PRIMARY KEY,
     contactEmail VARCHAR(255),
     contacName VARCHAR(30),
