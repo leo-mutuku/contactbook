@@ -57,5 +57,18 @@
 ### homepage after successful login
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/homepage-after-login.JPG)
 
-### homepage after successful login
+### add contact page / button click
 ![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
+
+### update contact bool with some entries
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/update-contactbook.JPG)
+
+### delet an entry from contact book
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/Add-contact-page.JPG)
+
+### signout, redirect to login clear cookies
+![signup page](https://github.com/leo-mutuku/contactbook/blob/main/public/signout.JPG)
+
+
+#    ------------------------------------------End ----------------------------------------
+  
